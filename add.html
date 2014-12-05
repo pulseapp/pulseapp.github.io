@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="#ddd">
+  
+  
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+  
+  <link rel='stylesheet' href='assets/css/style.css'>
+  <link href="https://fontastic.s3.amazonaws.com/FpPZqYbgRYyzTdZJaQeRke/icons.css" rel="stylesheet">  
+  <link href="assets/favicon.ico" rel="shortcut icon">
+  <link href="assets/apple-touch-icon.png" rel="apple-touch-icon">
+  
+  <title>Pulse Home</title>
+  
+</head>
+
+<body>
+
+  <header>
+    <nav class="main-nav">
+   <ul class="main-nav-list">
+      <li class="main-nav-list-item"><a class="main-nav-list-link is_active" href="index.html"><i class="icon-house"></i></a></li>
+      <li class="current main-nav-list-item"><a class="current main-nav-list-link" href="add.html"><i class="icon-add"></i></a></li>
+      <li class="main-nav-list-item"><a class="main-nav-list-link" href="profile.html"><i class="icon-profile"></i></a></li>
+   </ul>
+</nav>
+  </header>
+
+   <form class="search-channels-form">
+      <i class="icon-search"></i>
+      <input class="search-channels-input" type="search" placeholder="Search">
+      <button class="icon-delete"></button>
+   </form>
+
+
+
+   <section class="channels-wrap">
+      <ul class="channels-list">
+         <li class="channel-list-item">
+            <a class="channel-link" href="javascript:void(0)">
+               <i class="icon-facebook"></i>
+               <h2 class="channel-name">Toyota USA</h2>
+               <span class="channel-meta">2,158,002 Fans</span>
+               <span class="channel-action-button">Follow</span>
+            </a>
+         </li>
+         
+         <li class="channel-list-item">
+            <a class="channel-link" href="javascript:void(0)">
+               <i class="icon-facebook"></i>
+               <h2 class="channel-name">Toyota Global</h2>
+               <span class="channel-meta">835,926 Fans</span>
+               <i class="icon-check"></i>
+            </a>
+         </li>
+         
+         <li class="channel-list-item">
+            <a class="channel-link" href="javascript:void(0)">
+               <i class="icon-facebook"></i>
+               <h2 class="channel-name">Toyota of Hollywood</h2>
+               <span class="channel-meta">14,407 Fans</span>
+               <span class="channel-action-button">Follow</span>
+            </a>
+         </li>
+         
+         <li class="channel-list-item">
+            <a class="channel-link" href="javascript:void(0)">
+               <i class="icon-twitter"></i>
+               <h2 class="channel-name">Toyota USA</h2>
+               <span class="channel-meta">2,158,002 Followers</span>
+               <span class="channel-action-button">Follow</span>
+            </a>
+         </li>
+         
+         <li class="channel-list-item">
+            <a class="channel-link" href="javascript:void(0)">
+               <i class="icon-facebook"></i>
+               <h2 class="channel-name">Toyota Global</h2>
+               <span class="channel-meta">835,926 Fans</span>
+               <span class="channel-action-button">Follow</span>
+            </a>
+         </li>
+         
+         <li class="channel-list-item">
+            <a class="channel-link" href="javascript:void(0)">
+               <i class="icon-facebook"></i>
+               <h2 class="channel-name">Toyota of Hollywood</h2>
+               <span class="channel-meta">14,407 Fans</span>
+               <span class="channel-action-button">Follow</span>
+            </a>
+         </li>
+         
+         <li class="channel-list-item">
+            <a class="channel-link" href="javascript:void(0)">
+               <i class="icon-youtube"></i>
+               <h2 class="channel-name">Toyota USA</h2>
+               <span class="channel-meta">2,158,002 Fans</span>
+               <span class="channel-action-button">Follow</span>
+            </a>
+         </li>
+         
+         <li class="channel-list-item">
+            <a class="channel-link" href="javascript:void(0)">
+               <i class="icon-pinterest"></i>
+               <h2 class="channel-name">Toyota Global</h2>
+               <span class="channel-meta">835,926 Fans</span>
+               <span class="channel-action-button">Follow</span>
+            </a>
+         </li>
+         
+         <li class="channel-list-item">
+            <a class="channel-link" href="javascript:void(0)">
+               <i class="icon-facebook"></i>
+               <h2 class="channel-name">Toyota of Hollywood</h2>
+               <span class="channel-meta">14,407 Fans</span>
+               <span class="channel-action-button">Follow</span>
+            </a>
+         </li>
+         
+         <li class="channel-list-item">
+            <a class="channel-link" href="javascript:void(0)">
+               <i class="icon-linkedin"></i>
+               <h2 class="channel-name">Toyota USA</h2>
+               <span class="channel-meta">2,158,002 Fans</span>
+               <span class="channel-action-button">Follow</span>
+            </a>
+         </li>
+         
+         <li class="channel-list-item">
+            <a class="channel-link" href="javascript:void(0)">
+               <i class="icon-instagram"></i>
+               <h2 class="channel-name">Toyota Global</h2>
+               <span class="channel-meta">835,926 Fans</span>
+               <span class="channel-action-button">Follow</span>
+            </a>
+         </li>
+         
+         <li class="channel-list-item">
+            <a class="channel-link" href="javascript:void(0)">
+               <i class="icon-facebook"></i>
+               <h2 class="channel-name">Toyota of Hollywood</h2>
+               <span class="channel-meta">14,407 Fans</span>
+               <span class="channel-action-button">Follow</span>
+            </a>
+         </li>
+         
+         <li class="channel-list-item">
+            <a class="channel-link" href="javascript:void(0)">
+               <i class="icon-facebook"></i>
+               <h2 class="channel-name">Toyota USA</h2>
+               <span class="channel-meta">2,158,002 Fans</span>
+               <span class="channel-action-button">Follow</span>
+            </a>
+         </li>
+         
+         <li class="channel-list-item">
+            <a class="channel-link" href="javascript:void(0)">
+               <i class="icon-facebook"></i>
+               <h2 class="channel-name">Toyota Global</h2>
+               <span class="channel-meta">835,926 Fans</span>
+               <span class="channel-action-button">Follow</span>
+            </a>
+         </li>
+         
+         <li class="channel-list-item">
+            <a class="channel-link" href="javascript:void(0)">
+               <i class="icon-facebook"></i>
+               <h2 class="channel-name">Toyota of Hollywood</h2>
+               <span class="channel-meta">14,407 Fans</span>
+               <span class="channel-action-button">Follow</span>
+            </a>
+         </li>
+         
+         <li class="channel-list-item">
+            <a class="channel-link" href="javascript:void(0)">
+               <i class="icon-facebook"></i>
+               <h2 class="channel-name">Toyota USA</h2>
+               <span class="channel-meta">2,158,002 Fans</span>
+               <span class="channel-action-button">Follow</span>
+            </a>
+         </li>
+         
+         <li class="channel-list-item">
+            <a class="channel-link" href="javascript:void(0)">
+               <i class="icon-facebook"></i>
+               <h2 class="channel-name">Toyota Global</h2>
+               <span class="channel-meta">835,926 Fans</span>
+               <span class="channel-action-button">Follow</span>
+            </a>
+         </li>
+         
+         <li class="channel-list-item">
+            <a class="channel-link" href="javascript:void(0)">
+               <i class="icon-facebook"></i>
+               <h2 class="channel-name">Toyota of Hollywood</h2>
+               <span class="channel-meta">14,407 Fans</span>
+               <span class="channel-action-button">Follow</span>
+            </a>
+         </li>
+         
+         <li class="channel-list-item">
+            <a class="channel-link" href="javascript:void(0)">
+               <i class="icon-facebook"></i>
+               <h2 class="channel-name">Toyota USA</h2>
+               <span class="channel-meta">2,158,002 Fans</span>
+               <span class="channel-action-button">Follow</span>
+            </a>
+         </li>
+         
+         <li class="channel-list-item">
+            <a class="channel-link" href="javascript:void(0)">
+               <i class="icon-facebook"></i>
+               <h2 class="channel-name">Toyota Global</h2>
+               <span class="channel-meta">835,926 Fans</span>
+               <span class="channel-action-button">Follow</span>
+            </a>
+         </li>
+         
+         <li class="channel-list-item">
+            <a class="channel-link" href="javascript:void(0)">
+               <i class="icon-facebook"></i>
+               <h2 class="channel-name">Toyota of Hollywood</h2>
+               <span class="channel-meta">14,407 Fans</span>
+               <span class="channel-action-button">Follow</span>
+            </a>
+         </li>
+         
+         <li class="channel-list-item">
+            <a class="channel-link" href="javascript:void(0)">
+               <i class="icon-facebook"></i>
+               <h2 class="channel-name">Toyota USA</h2>
+               <span class="channel-meta">2,158,002 Fans</span>
+               <span class="channel-action-button">Follow</span>
+            </a>
+         </li>
+         
+         <li class="channel-list-item">
+            <a class="channel-link" href="javascript:void(0)">
+               <i class="icon-facebook"></i>
+               <h2 class="channel-name">Toyota Global</h2>
+               <span class="channel-meta">835,926 Fans</span>
+               <span class="channel-action-button">Follow</span>
+            </a>
+         </li>
+         
+         <li class="channel-list-item">
+            <a class="channel-link" href="javascript:void(0)">
+               <i class="icon-facebook"></i>
+               <h2 class="channel-name">Toyota of Hollywood</h2>
+               <span class="channel-meta">14,407 Fans</span>
+               <span class="channel-action-button">Follow</span>
+            </a>
+         </li>
+         
+         <li class="channel-list-item">
+            <a class="channel-link" href="javascript:void(0)">
+               <i class="icon-facebook"></i>
+               <h2 class="channel-name">Toyota USA</h2>
+               <span class="channel-meta">2,158,002 Fans</span>
+               <span class="channel-action-button">Follow</span>
+            </a>
+         </li>
+         
+         <li class="channel-list-item">
+            <a class="channel-link" href="javascript:void(0)">
+               <i class="icon-facebook"></i>
+               <h2 class="channel-name">Toyota Global</h2>
+               <span class="channel-meta">835,926 Fans</span>
+               <span class="channel-action-button">Follow</span>
+            </a>
+         </li>
+         
+         <li class="channel-list-item">
+            <a class="channel-link" href="javascript:void(0)">
+               <i class="icon-facebook"></i>
+               <h2 class="channel-name">Toyota of Hollywood</h2>
+               <span class="channel-meta">14,407 Fans</span>
+               <span class="channel-action-button">Follow</span>
+            </a>
+         </li>
+         
+         <li class="channel-list-item">
+            <a class="channel-link" href="javascript:void(0)">
+               <i class="icon-facebook"></i>
+               <h2 class="channel-name">Toyota USA</h2>
+               <span class="channel-meta">2,158,002 Fans</span>
+               <span class="channel-action-button">Follow</span>
+            </a>
+         </li>
+         
+         <li class="channel-list-item">
+            <a class="channel-link" href="javascript:void(0)">
+               <i class="icon-facebook"></i>
+               <h2 class="channel-name">Toyota Global</h2>
+               <span class="channel-meta">835,926 Fans</span>
+               <span class="channel-action-button">Follow</span>
+            </a>
+         </li>
+         
+         <li class="channel-list-item">
+            <a class="channel-link" href="javascript:void(0)">
+               <i class="icon-facebook"></i>
+               <h2 class="channel-name">Toyota of Hollywood</h2>
+               <span class="channel-meta">14,407 Fans</span>
+               <span class="channel-action-button">Follow</span>
+            </a>
+         </li>
+         
+         <li class="channel-list-item">
+            <a class="channel-link" href="javascript:void(0)">
+               <i class="icon-facebook"></i>
+               <h2 class="channel-name">Toyota USA</h2>
+               <span class="channel-meta">2,158,002 Fans</span>
+               <span class="channel-action-button">Follow</span>
+            </a>
+         </li>
+         
+         <li class="channel-list-item">
+            <a class="channel-link" href="javascript:void(0)">
+               <i class="icon-facebook"></i>
+               <h2 class="channel-name">Toyota Global</h2>
+               <span class="channel-meta">835,926 Fans</span>
+               <span class="channel-action-button">Follow</span>
+            </a>
+         </li>
+         
+         <li class="channel-list-item">
+            <a class="channel-link" href="javascript:void(0)">
+               <i class="icon-facebook"></i>
+               <h2 class="channel-name">Toyota of Hollywood</h2>
+               <span class="channel-meta">14,407 Fans</span>
+               <span class="channel-action-button">Follow</span>
+            </a>
+         </li>
+         
+         <li class="channel-list-item">
+            <a class="channel-link" href="javascript:void(0)">
+               <i class="icon-facebook"></i>
+               <h2 class="channel-name">Toyota USA</h2>
+               <span class="channel-meta">2,158,002 Fans</span>
+               <span class="channel-action-button">Follow</span>
+            </a>
+         </li>
+         
+         <li class="channel-list-item">
+            <a class="channel-link" href="javascript:void(0)">
+               <i class="icon-facebook"></i>
+               <h2 class="channel-name">Toyota Global</h2>
+               <span class="channel-meta">835,926 Fans</span>
+               <span class="channel-action-button">Follow</span>
+            </a>
+         </li>
+         
+         <li class="channel-list-item">
+            <a class="channel-link" href="javascript:void(0)">
+               <i class="icon-facebook"></i>
+               <h2 class="channel-name">Toyota of Hollywood</h2>
+               <span class="channel-meta">14,407 Fans</span>
+               <span class="channel-action-button">Follow</span>
+            </a>
+         </li>
+         
+         <li class="channel-list-item">
+            <a class="channel-link" href="javascript:void(0)">
+               <i class="icon-facebook"></i>
+               <h2 class="channel-name">Toyota USA</h2>
+               <span class="channel-meta">2,158,002 Fans</span>
+               <span class="channel-action-button">Follow</span>
+            </a>
+         </li>
+         
+         <li class="channel-list-item">
+            <a class="channel-link" href="javascript:void(0)">
+               <i class="icon-facebook"></i>
+               <h2 class="channel-name">Toyota Global</h2>
+               <span class="channel-meta">835,926 Fans</span>
+               <span class="channel-action-button">Follow</span>
+            </a>
+         </li>
+         
+         <li class="channel-list-item">
+            <a class="channel-link" href="javascript:void(0)">
+               <i class="icon-facebook"></i>
+               <h2 class="channel-name">Toyota of Hollywood</h2>
+               <span class="channel-meta">14,407 Fans</span>
+               <span class="channel-action-button">Follow</span>
+            </a>
+         </li>
+         
+         <li class="channel-list-item">
+            <a class="channel-link" href="javascript:void(0)">
+               <i class="icon-facebook"></i>
+               <h2 class="channel-name">Toyota USA</h2>
+               <span class="channel-meta">2,158,002 Fans</span>
+               <span class="channel-action-button">Follow</span>
+            </a>
+         </li>
+         
+         <li class="channel-list-item">
+            <a class="channel-link" href="javascript:void(0)">
+               <i class="icon-facebook"></i>
+               <h2 class="channel-name">Toyota Global</h2>
+               <span class="channel-meta">835,926 Fans</span>
+               <span class="channel-action-button">Follow</span>
+            </a>
+         </li>
+         
+         <li class="channel-list-item">
+            <a class="channel-link" href="javascript:void(0)">
+               <i class="icon-facebook"></i>
+               <h2 class="channel-name">Toyota of Hollywood</h2>
+               <span class="channel-meta">14,407 Fans</span>
+               <span class="channel-action-button">Follow</span>
+            </a>
+         </li>
+      </ul>
+   </section>
+  
+   <script src='assets/js/vendor/jquery-1.9.1.min.js'></script>
+<script src='assets/js/vendor/imagesloaded.min.js'></script>
+<script src='assets/js/vendor/jquery.masonry.min.js'></script>
+<script src='assets/js/main.js'></script>
+<script src='assets/js/uilang.js'></script>
+
+</body>
+</html>

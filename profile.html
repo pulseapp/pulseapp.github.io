@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="#ddd">
+  
+  
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+  
+  <link rel='stylesheet' href='assets/css/style.css'>
+  <link href="https://fontastic.s3.amazonaws.com/FpPZqYbgRYyzTdZJaQeRke/icons.css" rel="stylesheet">  
+  <link href="assets/favicon.ico" rel="shortcut icon">
+  <link href="assets/apple-touch-icon.png" rel="apple-touch-icon">
+  
+  <title>Pulse Home</title>
+  
+</head>
+
+<body>
+
+  <header>
+    <nav class="main-nav">
+   <ul class="main-nav-list">
+      <li class="main-nav-list-item"><a class="main-nav-list-link is_active" href="index.html"><i class="icon-house"></i></a></li>
+      <li class="main-nav-list-item"><a class="main-nav-list-link" href="add.html"><i class="icon-add"></i></a></li>
+      <li class="current main-nav-list-item"><a class="current main-nav-list-link" href="profile.html"><i class="icon-profile"></i></a></li>
+   </ul>
+</nav>
+  </header>
+
+<section class="profile-head-wrap">
+   <a class="invites-link" href="javascript:void(0)"><i class="icon-heart"></i></a>
+   <a class="settings-link" href="settings.html"><i class="icon-setting"></i></a>
+   
+   <img class="profile-avatar" src="assets/i/avatar/lux.png" alt="Lux Narayan"/>
+   <h2 class="profile-name">Lux Narayan</h2>
+
+   <ul class="tabs-list tabs-list-2-col stats-list">
+      <li class="tabs-list-item">
+         <a class="tabs-list-link is_active" href="javascript:void(0)">
+            <span class="stats-value">24</span>
+            <span class="stats-label">Bookmarks</span>
+         </a>
+      </li>
+      <li class="tabs-list-item">
+         <a class="tabs-list-link" href="javascript:void(0)">
+            <span class="stats-value">19</span>
+            <span class="stats-label">Following</span>
+         </a>
+      </li>
+   </ul>     
+</section>   
+
+ 
+   
+<section class="media-wrap media-2-col js-masonary-wrapper">
+   <div class="media">
+     
+      <a class="media-link" href="javascript:void(0)">
+          <img class="media-img" src="assets/i/media/nissan-ig-1.jpg" alt="">
+      
+          <div class="media-meta">
+              <p class="media-copy-highlight">#ParisMotorShow, #Nissan</p>
+              
+              <h2 class="media-title"><img class="media-avatar" src="assets/i/avatar/nissan.png">Nissan USA</h2>
+              
+              <i class="icon-instagram"></i>
+          </div>
+      </a>
+   </div>
+   
+   <div class="media">
+      <img class="media-img" src="assets/i/media/nissan-fb-1.jpg" alt="">
+   
+      <div class="media-meta">
+          <p class="media-copy-highlight">#Nissan #370Z #NISMO</p>
+          
+          <h2 class="media-title"><img class="media-avatar" src="assets/i/avatar/nissan.png">Nissan</h2>
+          
+          <i class="icon-facebook"></i>
+      </div>
+   </div>
+   
+   <div class="media">
+      <img class="media-img" src="assets/i/media/ford-fb-1.jpg" alt="">
+   
+      <div class="media-meta">
+          <p class="media-copy-highlight">For this week's Fordie, show off the front end of your ride!</p>
+          
+          <h2 class="media-title"><img class="media-avatar" src="assets/i/avatar/ford.jpg">Ford Motor Company</h2>
+          
+          <i class="icon-facebook"></i>
+      </div>
+   </div>
+   
+   <div class="media">
+      <img class="media-img" src="assets/i/media/chevrolet-fb-1.png" alt="">
+   
+      <div class="media-meta">
+          <p class="media-copy-highlight">For this week's Fordie, show off the front end of your ride!</p>
+          
+          <h2 class="media-title"><img class="media-avatar" src="assets/i/avatar/chevrolet.jpg">Chevrolet</h2>
+          
+          <i class="icon-facebook"></i>
+      </div>
+   </div>
+   
+   <div class="media">
+      <img class="media-img" src="assets/i/media/nissan-tw-1.jpg" alt="">
+   
+      <div class="media-meta">
+          <p class="media-copy-highlight">#Nissan, #Altima</p>
+          
+          <h2 class="media-title"><img class="media-avatar" src="assets/i/avatar/nissan.png">@NissanUSA</h2>
+          
+          <i class="icon-twitter"></i>
+      </div>
+   </div>
+   
+   <div class="media">
+      <img class="media-img" src="assets/i/media/chevrolet-fb-2.jpg" alt="">
+   
+      <div class="media-meta">
+          <p class="media-copy-highlight">A 13-year-old girl with a 70 MPH pitch. Watch and see how Mo’ne Davis is giving a whole new meaning to the saying, “You throw like a girl." http://s.chevy.com/c8P</p>
+          
+          <h2 class="media-title"><img class="media-avatar" src="assets/i/avatar/chevrolet.jpg">Chevrolet</h2>
+          
+          <i class="icon-facebook"></i>
+      </div>
+   </div>
+   
+   
+   <div class="media">
+      <img class="media-img" src="assets/i/media/ford-fb-2.jpg" alt="">
+   
+      <div class="media-meta">
+          <p class="media-copy-highlight">Since it's Adopt a Dog Month, we'd like to give a high paw to Maria Schau from Tails Humane Society who finds forever homes for thousands of four-legged friends every year. Know someone else who is going further? Tell us about them.</p>
+          
+          <h2 class="media-title"><img class="media-avatar" src="assets/i/avatar/ford.jpg">Ford Motor Company</h2>
+          
+          <i class="icon-facebook"></i>
+      </div>
+   </div>
+   
+   
+   <div class="media">
+      <img class="media-img" src="assets/i/media/nissan-yt-1.jpg" alt="">
+   
+      <div class="media-meta">
+          <p class="media-copy-highlight">NissanConnect uses your smartphone and your Nissan’s color display to put your world at your fingertips.</p>
+          
+          <h2 class="media-title"><img class="media-avatar" src="assets/i/avatar/nissan.png">Nissan USA</h2>
+          
+          <i class="icon-youtube"></i>
+      </div>
+   </div>
+   
+   
+   <div class="media">
+      <img class="media-img" src="assets/i/media/chevrolet-fb-3.png" alt="">
+   
+      <div class="media-meta">
+          <p class="media-copy-highlight">The Equinox has the quality and versatility to help you complete your home improvement projects. Need inspiration? Look no further. Check out these DoItYourself.com videos for your next project: http://s.chevy.com/nZF</p>
+          
+          <h2 class="media-title"><img class="media-avatar" src="assets/i/avatar/chevrolet.jpg">Chevrolet</h2>
+          
+          <i class="icon-facebook"></i>
+      </div>
+   </div>
+   
+   
+   <div class="media">
+      <img class="media-img" src="assets/i/media/ford-fb-3.jpg" alt="">
+   
+      <div class="media-meta">
+          <p class="media-copy-highlight">Greetings from the Rouge!</p>
+          
+          <h2 class="media-title"><img class="media-avatar" src="assets/i/avatar/ford.jpg">Ford Motor Company</h2>
+          
+          <i class="icon-facebook"></i>
+      </div>
+   </div>
+   
+   
+   <div class="media">
+      <img class="media-img" src="assets/i/media/nissan-in-1.png" alt="">
+   
+      <div class="media-meta">
+          <p class="media-copy-highlight">"What people want to get out of a football game is universal." - Roel de Vries on the connection between sports, fans, and social media:
+   https://bit.ly/1rktWAH</p>
+   
+   
+         <h2 class="media-title"><img class="media-avatar" src="assets/i/avatar/nissan.png">Nissan Motor Corporation</h2>
+         
+          <i class="icon-linkedin"></i>
+      </div>
+   </div>
+   
+   
+   <div class="media">
+      <img class="media-img" src="assets/i/media/chevrolet-fb-4.jpg" alt="">
+   
+      <div class="media-meta">
+          <p class="media-copy-highlight">Melinda C.'s Silverado is shining bright for Truck Month. For Show & Tell Tuesday, let's see your truck in the spotlight!</p>
+          
+          <h2 class="media-title"><img class="media-avatar" src="assets/i/avatar/chevrolet.jpg">Chevrolet</h2>
+          
+          <i class="icon-facebook"></i>
+      </div>
+   </div>
+   
+   
+   <div class="media">
+      <img class="media-img" src="assets/i/media/ford-fb-4.jpg" alt="">
+   
+      <div class="media-meta">
+          <p class="media-copy-highlight">What would you carry 3,300 lbs of in the bed of a 2015 F-150? http://ford.to/1vOjyIe</p>
+          
+          <h2 class="media-title"><img class="media-avatar" src="assets/i/avatar/ford.jpg">Ford Motor Company</h2>
+          
+          <i class="icon-facebook"></i>
+      </div>
+   </div>
+   
+   
+   <div class="media">
+      <img class="media-img" src="assets/i/media/nissan-pt-1.jpg" alt="">
+   
+      <div class="media-meta">
+          <p class="media-copy-highlight">2014 Nissan Maxima</p>
+          
+          <h2 class="media-title"><img class="media-avatar" src="assets/i/avatar/nissan.png">Nissan USA</h2>
+          
+          <i class="icon-pinterest"></i>
+      </div>
+   </div>
+   
+   
+   <div class="media">
+      <img class="media-img" src="assets/i/media/nissan-fb-6.jpg" alt="">
+   
+      <div class="media-meta">
+          <p class="media-copy-highlight">#Nissan #370Z #NISMO</p>
+          
+          <h2 class="media-title"><img class="media-avatar" src="assets/i/avatar/nissan.png">Nissan</h2>
+          
+          <i class="icon-facebook"></i>
+      </div>
+   </div>
+   
+   
+   <div class="media">
+      <img class="media-img" src="assets/i/media/nissan-fb-5.jpg" alt="">
+   
+      <div class="media-meta">
+          <p class="media-copy-highlight">#Nissan #370Z #NISMO</p>
+          
+          <h2 class="media-title"><img class="media-avatar" src="assets/i/avatar/nissan.png">Nissan</h2>
+          
+          <i class="icon-facebook"></i>
+      </div>
+   </div>
+   
+   <div class="media">
+      <img class="media-img" src="assets/i/media/ford-fb-5.jpg" alt="">
+   
+      <div class="media-meta">
+          <p class="media-copy-highlight">Time for a brain break! Let your mind wander the winding roads of Germany in a Ford Fiesta: http://ford.to/1Dx6I3k</p>
+          
+          <h2 class="media-title"><img class="media-avatar" src="assets/i/avatar/ford.jpg">Ford Motor Company</h2>
+          
+          <i class="icon-facebook"></i>
+      </div>
+   </div>
+   
+   <div class="media">
+      <img class="media-img" src="assets/i/media/chevrolet-fb-5.png" alt="">
+   
+      <div class="media-meta">
+          <p class="media-copy-highlight">Stop and smell the flowers in your Equinox. With its quality Multi-Flex sliding rear seats, you have room for the pretty things in life.</p>
+          
+          <h2 class="media-title"><img class="media-avatar" src="assets/i/avatar/chevrolet.jpg">Chevrolet</h2>
+          
+          <i class="icon-facebook"></i>
+      </div>
+   </div>
+</section>  
+
+
+
+<section class="profile-channels-wrap">
+   
+</section>   
+  
+   <script src='assets/js/vendor/jquery-1.9.1.min.js'></script>
+<script src='assets/js/vendor/imagesloaded.min.js'></script>
+<script src='assets/js/vendor/jquery.masonry.min.js'></script>
+<script src='assets/js/main.js'></script>
+<script src='assets/js/uilang.js'></script>
+
+</body>
+</html>
